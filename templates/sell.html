@@ -1,0 +1,19 @@
+{%extends "layout.html" %}
+
+{%block main%}
+
+    <form action = "/sell" method = "post">
+        <div>
+            <select name = "symbol" required>
+                <option disabled selected>Symbol</option>
+                {%for buy in bought%}
+                    <option>{{buy["Symbol"]}}</option>
+                {%endfor%}
+            </select>
+        </div>
+        <br>
+        <input type = "number" name = "shares" required>
+        <button type = "submit" >Sell</button>
+    </form>
+
+{%endblock%}

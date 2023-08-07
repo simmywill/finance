@@ -1,0 +1,11 @@
+{%extends "layout.html" %}
+
+{%block main%}
+    <div>
+        <ul style = "list-style: none">
+            <li>Name: {{quote_Dict["name"]}}</li>
+            <li>Price: {{quote_Dict["price"] | usd}}</li>
+            <li>Symbol: {{quote_Dict["symbol"]}}</li>
+        </ul>
+    </div>
+{%endblock%}

@@ -1,0 +1,11 @@
+{%extends "layout.html" %}
+
+{%block main%}
+
+    <form action = "/register" method = "post">
+        <input name = "username" type = "text" placeholder = "username" required>
+        <input name = "password" placeholder = "password" type = "password" required>
+        <input name = "confirmation" type = "password" placeholder = "password" required>
+        <button type = "submit" >Register</button>
+    </form>
+{%endblock%}

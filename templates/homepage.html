@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{%block main%}
+    <div>
+        <table>
+            <th>Transaction ID</th>
+            <th>Shares</th>
+            <th>Symbol</th>
+            <th>Price</th>
+            <th>Total</th>
+
+       {%for data in datas%}
+            <tr>
+                <td>
+                    {{data["transaction_id"]}}
+                </td>
+                <td>
+                    {{data["NumberOfShares"]}}
+                </td>
+                <td>
+                    {{data["Symbol"]}}
+                </td>
+                <td>
+                    {{data["price"] | usd}}
+                </td>
+                <td>
+                    {{data["total"] | usd}}
+                </td>
+            </tr>
+       {%endfor%}
+        </table>
+    </div>
+    <br>
+    <div style = "padding-left : 1300px">Difference:  {{diff | usd}}</div>
+{%endblock%}
